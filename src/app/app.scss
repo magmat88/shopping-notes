@@ -4,7 +4,7 @@
 
 .app {
     @extend %columnCentered;
-    @extend %paddingStandardNoMargin;
+    @extend %noPaddingNoMargin;
     @extend %paletteWhite;
     font-family: $font-main, $font-alternative;
     width: 100%;
