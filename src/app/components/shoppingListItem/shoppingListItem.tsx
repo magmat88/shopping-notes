@@ -1,3 +1,4 @@
+import React from 'react';
 import { ReactComponent as PlusBtn} from '../../images/plusBtn.svg';
 import './shoppingListItem.scss';
 
