@@ -37,8 +37,9 @@
 .filter-btns {
     @extend %paddingStandardMarginStandard;
     @extend %rowSpaceBetween;
-    width: 90vw;
+    cursor: pointer;
     height: 36px;
+    width: 90vw;
 }
 
 .navigation-bar-items {
