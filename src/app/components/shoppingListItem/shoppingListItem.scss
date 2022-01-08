@@ -1,0 +1,39 @@
+@import "../../styles/mixins/mixins.scss";
+@import "../../styles/placeholders/placeholders.scss";
+@import "../../styles/variables/variables.scss";
+
+.add-product {
+    @extend %rowLeft;
+}
+
+.btn-add-product {
+    width: 25px;
+}
+
+.btn-remove-product {
+    color: $color_alert;
+    background-color: transparent;
+    border: none;
+}
+
+.shopping-list-item {
+    @extend %rowSpaceBetween;
+    @extend %paletteWhite;
+    @extend %paddingSmallNoMargin;
+    border-bottom: 0.5px solid $color_light;
+    height: 56px;
+    width: 375px;
+
+    &:first-of-type {
+        border-top: 0.5px solid $color_light;
+    }
+}
+
+.text-product-category {
+    @extend %paletteWhiteLight;
+}
+
+.text-product-name {
+    @extend %marginPaddingStandard;
+
+}

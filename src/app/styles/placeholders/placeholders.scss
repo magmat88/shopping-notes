@@ -1,0 +1,39 @@
+@import "../mixins/mixins.scss";
+@import "../variables/variables.scss";
+
+%columnCentered {
+    @include setFlexDisplay(column, center, center);
+}
+%rowLeft {
+    @include setFlexDisplay(row, flex-start, center);
+}
+%rowSpaceBetween {
+    @include setFlexDisplay(row, space-between, center);
+}
+
+%fontMedium {
+    font-size: 1.1rem;
+}
+
+%marginPaddingStandard {
+    @include setMarginAndPadding(10px, 10px);
+}
+%noPaddingNoMargin {
+    @include setMarginAndPadding(0, 0);
+}
+%paddingSmallNoMargin {
+    @include setMarginAndPadding(0px, 5px);
+}
+%paddingStandardNoMargin {
+    @include setMarginAndPadding(0, 10px);
+}
+
+%paletteContrastWhite {
+    @include setColorPalette($color_contrast, $color_white);
+}
+%paletteWhite {
+    @include setColorPalette($color_white, $color_dark);
+}
+%paletteWhiteLight {
+    @include setColorPalette($color_white, $color_light);
+}

@@ -1,17 +1,12 @@
 import React from 'react';
-import { Footer } from './components/footer/footer';
-import { Header } from './components/header/header';
-import { MainContent } from './components/mainContent/mainContent';
-import './App.scss';
 
-function App() {
+import { ShoppingListItem } from './components/shoppingListItem/shoppingListItem';
+import './app.scss';
+
+export function App() {
     return (
-        <div className="App">
-            <Header title={"This is header"} />
-            <MainContent title={"This is main content"} />
-            <Footer title={"This is footer"} />
+        <div className="app">
+            <ShoppingListItem />
         </div>
     );
 }
-
-export default App;
