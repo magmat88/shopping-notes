@@ -1,15 +1,37 @@
-import plusBtn from "../../images/plusBtn.svg";
+import { ReactComponent as PlusBtn} from '../../images/plusBtn.svg';
 import './shoppingListItem.scss';
 
-export function ShoppingListItem(): JSX.Element {
+interface ShoppingListItemProps {
+    onAddProduct: () => void;
+    onRemoveProduct: () => void;
+    product: Product;
+}
+
+type Product = {
+    // TODO: category as enum
+    category: string;
+    name: string;
+};
+
+export function ShoppingListItem({
+    onAddProduct,
+    onRemoveProduct,
+    product
+}: ShoppingListItemProps): JSX.Element {
     return (
         <div className="shopping-list-item">
             <div className="add-product">
-                <div className="btn-add-product"><img src={plusBtn} alt="Circle button with plus symbol" /></div>
-                <div className="text-product-name">Apples</div>
-                <div className="text-product-category">in Fruits</div>
+                {/* zmienić style */}
+                <button className="btn-add-product" onClick={onAddProduct}>
+                    <PlusBtn />
+                </button>
+                {/* TODO: product.name - first letter to UpperCase if required */}
+                <div className="text-product-name">{product.name}</div>
+                <div className="text-product-category">in {product.category}</div>
             </div>
-            <button className="btn-remove-product">Remove</button>
+            <button className="btn-remove-product" onClick={onRemoveProduct}>
+                Remove
+            </button>
         </div>
     );
 }

@@ -7,14 +7,19 @@
 }
 
 .btn-add-product {
-    width: 25px;
+    @extend %columnCentered;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 35px;
 }
 
 .btn-remove-product {
-    color: $color_alert;
+    @extend %fontStandard;
     background-color: transparent;
     border: none;
-    @extend %fontStandard;
+    color: $color_alert;
+    cursor: pointer;
 }
 
 .shopping-list-item {
