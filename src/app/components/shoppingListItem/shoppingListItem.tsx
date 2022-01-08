@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as PlusBtn} from '../../images/plusBtn.svg';
+import { ReactComponent as PlusIcon } from '../../images/plusIcon.svg';
 import './shoppingListItem.scss';
 
 interface ShoppingListItemProps {
@@ -22,15 +22,16 @@ export function ShoppingListItem({
     return (
         <div className="shopping-list-item">
             <div className="add-product">
-                {/* zmienić style */}
-                <button className="btn-add-product" onClick={onAddProduct}>
-                    <PlusBtn />
+                <button className="btn-transparent btn-add-product" onClick={onAddProduct}>
+                    <PlusIcon />
                 </button>
                 {/* TODO: product.name - first letter to UpperCase if required */}
                 <div className="text-product-name">{product.name}</div>
-                <div className="text-product-category">in {product.category}</div>
+                <div className="text-product-category">
+                    in {product.category}
+                </div>
             </div>
-            <button className="btn-remove-product" onClick={onRemoveProduct}>
+            <button className="btn-transparent btn-remove-product" onClick={onRemoveProduct}>
                 Remove
             </button>
         </div>
