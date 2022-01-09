@@ -8,18 +8,16 @@
 
 .btn-add-product {
     @extend %columnCentered;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    width: 35px;
+    width: 2rem;
 }
 
 .btn-remove-product {
     @extend %fontStandard;
-    background-color: transparent;
-    border: none;
     color: $color_alert;
-    cursor: pointer;
+}
+
+.btn-transparent {
+    @extend %btnTransparent;
 }
 
 .shopping-list-item {
@@ -27,6 +25,7 @@
     @extend %paletteWhite;
     @extend %paddingSmallNoMargin;
     border-bottom: 0.5px solid $color_light;
+    font-family: $font-main, $font-alternative;
     height: 56px;
     width: 90vw;
 
@@ -41,5 +40,4 @@
 
 .text-product-name {
     @extend %marginPaddingStandard;
-
 }

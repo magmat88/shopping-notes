@@ -1,6 +1,13 @@
 @import "../mixins/mixins.scss";
 @import "../variables/variables.scss";
 
+%btnTransparent {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: $font-main, $font-alternative;
+}
+
 %columnCentered {
     @include setFlexDisplay(column, center, center);
 }
@@ -24,8 +31,14 @@
 %noPaddingNoMargin {
     @include setMarginAndPadding(0, 0);
 }
+%paddingSmallMarginStandard {
+    @include setMarginAndPadding(10px, 5px);
+}
 %paddingSmallNoMargin {
-    @include setMarginAndPadding(0px, 5px);
+    @include setMarginAndPadding(0, 5px);
+}
+%paddingStandardMarginStandard {
+    @include setMarginAndPadding(10px, 10px);
 }
 %paddingStandardNoMargin {
     @include setMarginAndPadding(0, 10px);
@@ -39,4 +52,11 @@
 }
 %paletteWhiteLight {
     @include setColorPalette($color_white, $color_light);
+}
+%paletteWhiteContrast {
+    @include setColorPalette($color_white, $color_contrast);
+}
+%paletteLightMedium {
+    @include setColorPalette($color_light, $color_medium);
+
 }

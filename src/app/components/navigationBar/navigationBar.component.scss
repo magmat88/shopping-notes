@@ -1,0 +1,92 @@
+@import "../../styles/mixins/mixins.scss";
+@import "../../styles/placeholders/placeholders.scss";
+@import "../../styles/variables/variables.scss";
+
+.back-icon {
+    height: 16px;
+    padding: 0 10px 0 0;
+}
+
+.btn-back {
+    @extend %rowLeft;
+}
+
+.btn-catalog {
+    @extend %paletteWhiteContrast;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.btn-done {
+    @extend %fontMedium;
+    font-weight: bold;
+}
+
+.btn-popular {
+    @extend %paletteContrastWhite;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.btn-wide {
+    @extend %paddingSmallNoMargin;
+    border: none;    
+    width: 45vw;
+}
+
+.filter-btns {
+    @extend %paddingStandardMarginStandard;
+    @extend %rowSpaceBetween;
+    cursor: pointer;
+    height: 36px;
+    width: 90vw;
+}
+
+.navigation-bar-items {
+    @extend %columnCentered;
+    @extend %paddingSmallMarginStandard;
+    @extend %paletteWhite;
+    height: 130px;
+    width: 90vw;
+}
+
+.navigation-btns {
+    @extend %paddingStandardMarginStandard;
+    @extend %rowSpaceBetween;
+    width: 90vw;
+
+    & button {
+        @extend %btnTransparent;
+        @extend %paletteWhiteContrast;
+    }
+}
+
+.search-field {
+    @extend %paddingSmallNoMargin;
+    @extend %paletteLightMedium;
+    @extend %rowSpaceBetween;
+    border-radius: 10px;
+    border: none;
+    height: 36px;
+    width: 90vw;
+
+    input[type="text"] {
+        @extend %fontStandard;
+        @extend %paddingSmallNoMargin;
+        @extend %rowLeft;
+        background: transparent;
+        border: none;
+        width: 82.5vw;
+    }
+
+    & label {
+        @extend %rowLeft;
+        width: 7.5vw;
+    }
+}
+
+.search-icon {
+    @extend %rowLeft;
+    height: 20px;
+    padding: 0 5px;
+}
