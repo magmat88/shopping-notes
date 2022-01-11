@@ -2,24 +2,6 @@
 @import "../../styles/placeholders/placeholders.scss";
 @import "../../styles/variables/variables.scss";
 
-.add-product {
-    @extend %rowLeft;
-}
-
-.btn-add-product {
-    @extend %columnCentered;
-    width: 2rem;
-}
-
-.btn-remove-product {
-    @extend %fontStandard;
-    color: $color_alert;
-}
-
-.btn-transparent {
-    @extend %btnTransparent;
-}
-
 .shopping-list-item {
     @extend %rowSpaceBetween;
     @extend %paletteWhite;
@@ -32,12 +14,30 @@
     &:first-of-type {
         border-top: 0.5px solid $color_light;
     }
-}
 
-.text-product-category {
-    @extend %paletteWhiteLight;
-}
+    .add-product {
+        @extend %rowLeft;
+    }
+    
+    .btn-add-product {
+        @extend %columnCentered;
+        width: 2rem;
+    }
+    
+    .btn-remove-product {
+        @extend %fontStandard;
+        color: $color_alert;
+    }
+    
+    .btn-transparent {
+        @extend %btnTransparent;
+    }
 
-.text-product-name {
-    @extend %marginPaddingStandard;
+    .text-product-category {
+        @extend %paletteWhiteLight;
+    }
+    
+    .text-product-name {
+        @extend %marginPaddingStandard;
+    }
 }

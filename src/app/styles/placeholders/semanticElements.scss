@@ -1,0 +1,13 @@
+@import "../mixins/mixins.scss";
+@import "../variables/variables.scss";
+
+%headerWithTransparentButtons {
+    @extend %paddingStandardMarginStandard;
+        @extend %rowSpaceBetween;
+        width: 90vw;
+    
+        & button {
+            @extend %btnTransparent;
+            @extend %paletteWhiteContrast;
+        }
+}
