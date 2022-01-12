@@ -11,20 +11,20 @@
     height: 58px;
     width: 90vw;
 
+    .category-icon {
+        height: 55%;
+    }
+    
+    .custom-category-icon-container {
+        @extend %columnCentered;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+    }
+
     p {
         @extend %paletteLightDark;
         cursor: default;
         font-weight: bold;
     }
-}
-
-.category-icon {
-    height: 55%;
-}
-
-.custom-category-icon-container {
-    @extend %columnCentered;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
 }

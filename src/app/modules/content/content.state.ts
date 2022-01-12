@@ -2,7 +2,7 @@ export type Product = {
     //TODO: category as enum
     category: string;
     name: string;
-    numberOfItems: number;
+    quantity: number;
 };
 
 export type ShoppingList = {

@@ -11,7 +11,7 @@ export function ShoppingListsPreview({
     shoppingLists
 }: ShoppingListsPreviewProps): JSX.Element {
     return (
-        <div className="shopping-lists-preview-items">
+        <div className="shopping-lists-preview">
             <header className="preview-header">
                 <h1>Lists</h1>
                 <button>Add list</button>

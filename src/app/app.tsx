@@ -1,12 +1,13 @@
 import React from 'react';
+import { products, shoppingLists } from './config/staticContent';
 import { NavigationBar } from './components/navigationBar/navigationBar.component';
 import { ShoppingListItem } from './components/shoppingListItem/shoppingListItem';
 import { ShoppingListsPreview } from './components/shoppingListsPreview/shoppingListsPreview.component';
 import './app.scss';
 
-export function App() {
-    return (
-        <div className="app">
+export function App(): JSX.Element {
+    function renderNavigationBar(): JSX.Element {
+        return (
             <NavigationBar
                 onBack={() => {
                     console.log('on back');
@@ -21,6 +22,11 @@ export function App() {
                     console.log('show popular products');
                 }}
             />
+        );
+    }
+
+    function renderShoppingListItem(): JSX.Element {
+        return (
             <ShoppingListItem
                 onAddProduct={() => {
                     console.log('on add product');
@@ -28,48 +34,24 @@ export function App() {
                 onRemoveProduct={() => {
                     console.log('on remove product');
                 }}
-                product={{
-                    category: 'Fruits',
-                    name: 'Arbuz',
-                    numberOfItems: 4
-                }}
+                product={products[0]}
             />
+        );
+    }
+
+    function renderShoppingListsPreview(): JSX.Element {
+        return (
             <ShoppingListsPreview
-                shoppingLists={[
-                    {
-                        listIcon: { color: '#008000', icon: 'TrolleyIcon' },
-                        productsList: [
-                            {
-                                category: 'Fruits',
-                                name: 'Orange',
-                                numberOfItems: 2
-                            },
-                            {
-                                category: 'Dairy',
-                                name: 'Milk',
-                                numberOfItems: 5
-                            }
-                        ],
-                        title: 'All I need'
-                    },
-                    {
-                        listIcon: { color: '#000FFF', icon: 'TrolleyIcon' },
-                        productsList: [
-                            {
-                                category: 'Vegetables',
-                                name: 'Carrot',
-                                numberOfItems: 8
-                            },
-                            {
-                                category: 'Cleaning products',
-                                name: 'Dish soap',
-                                numberOfItems: 1
-                            }
-                        ],
-                        title: 'To buy later'
-                    }
-                ]}
+                shoppingLists={shoppingLists}
             />
+        );
+    }
+
+    return (
+        <div className="app">
+            { renderNavigationBar() }
+            { renderShoppingListItem() }
+            { renderShoppingListsPreview }
         </div>
     );
 }
