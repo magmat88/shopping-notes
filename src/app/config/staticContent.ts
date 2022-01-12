@@ -38,5 +38,5 @@ export const products = [
         category: 'Fruits',
         name: 'Arbuz',
         quantity: 4
-    }
+    },
 ];

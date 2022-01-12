@@ -40,6 +40,8 @@ export function App(): JSX.Element {
     }
 
     function renderShoppingListsPreview(): JSX.Element {
+        console.log(shoppingLists);
+
         return (
             <ShoppingListsPreview
                 shoppingLists={shoppingLists}
@@ -51,7 +53,7 @@ export function App(): JSX.Element {
         <div className="app">
             { renderNavigationBar() }
             { renderShoppingListItem() }
-            { renderShoppingListsPreview }
+            { renderShoppingListsPreview() }
         </div>
     );
 }
