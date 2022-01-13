@@ -12,10 +12,6 @@ export function ShoppingListsPreview({
 }: ShoppingListsPreviewProps): JSX.Element {
     return (
         <div className="shopping-lists-preview">
-            <header className="preview-header">
-                <h1>Lists</h1>
-                <button>Add list</button>
-            </header>
             <section className="preview-empty">No lists</section>
             <section className="preview-with-content">
                 <ShoppingListTile shoppingList={shoppingLists[0]} />

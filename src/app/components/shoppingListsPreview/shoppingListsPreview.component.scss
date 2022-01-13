@@ -18,13 +18,5 @@
         @extend %paddingSmallMarginSmall;
         height: 70vh;
         width: 90vh;
-    }
-    
-    .preview-header {
-        @extend %headerWithTransparentButtons;
-    
-        & h1 {
-            @extend %fontLargeHeader;
-        }
-    }    
+    }   
 }

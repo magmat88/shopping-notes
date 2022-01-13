@@ -3,11 +3,11 @@
 
 %headerWithTransparentButtons {
     @extend %paddingStandardMarginStandard;
-        @extend %rowSpaceBetween;
-        width: 90vw;
-    
-        & button {
-            @extend %btnTransparent;
-            @extend %paletteWhiteContrast;
-        }
+    @extend %rowSpaceBetween;
+    width: 90vw;
+
+    & button {
+        @extend %btnTransparent;
+        @extend %paletteWhiteContrast;
+    }
 }
