@@ -1,0 +1,30 @@
+@import "../../styles/mixins/mixins.scss";
+@import "../../styles/placeholders/placeholders.scss";
+@import "../../styles/variables/variables.scss";
+
+.shopping-lists-preview {
+    @extend %columnCentered;
+    @extend %paddingSmallMarginStandard;
+
+    .preview-empty {
+        @extend %columnCentered;
+        @extend %paletteWhiteLight;
+        height: 70vh;
+        width: 90vh;
+    }
+    
+    .preview-with-content {
+        @extend %columnCentered;
+        @extend %paddingSmallMarginSmall;
+        height: 70vh;
+        width: 90vh;
+    }
+    
+    .preview-header {
+        @extend %headerWithTransparentButtons;
+    
+        & h1 {
+            @extend %fontLargeHeader;
+        }
+    }    
+}

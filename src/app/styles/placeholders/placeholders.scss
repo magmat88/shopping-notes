@@ -1,62 +1,11 @@
-@import "../mixins/mixins.scss";
-@import "../variables/variables.scss";
+@import "./buttons.scss";
+@import "./colorPalettes.scss";
+@import "./flexColumnsRows.scss";
+@import "./fonts.scss";
+@import "./paddingsMargins.scss";
+@import "./semanticElements.scss";
 
-%btnTransparent {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-family: $font-main, $font-alternative;
-}
 
-%columnCentered {
-    @include setFlexDisplay(column, center, center);
-}
-%rowLeft {
-    @include setFlexDisplay(row, flex-start, center);
-}
-%rowSpaceBetween {
-    @include setFlexDisplay(row, space-between, center);
-}
 
-%fontMedium {
-    font-size: 1.1rem;
-}
-%fontStandard {
-    font-size: 1rem;
-}
 
-%marginPaddingStandard {
-    @include setMarginAndPadding(10px, 10px);
-}
-%noPaddingNoMargin {
-    @include setMarginAndPadding(0, 0);
-}
-%paddingSmallMarginStandard {
-    @include setMarginAndPadding(10px, 5px);
-}
-%paddingSmallNoMargin {
-    @include setMarginAndPadding(0, 5px);
-}
-%paddingStandardMarginStandard {
-    @include setMarginAndPadding(10px, 10px);
-}
-%paddingStandardNoMargin {
-    @include setMarginAndPadding(0, 10px);
-}
 
-%paletteContrastWhite {
-    @include setColorPalette($color_contrast, $color_white);
-}
-%paletteWhite {
-    @include setColorPalette($color_white, $color_dark);
-}
-%paletteWhiteLight {
-    @include setColorPalette($color_white, $color_light);
-}
-%paletteWhiteContrast {
-    @include setColorPalette($color_white, $color_contrast);
-}
-%paletteLightMedium {
-    @include setColorPalette($color_light, $color_medium);
-
-}

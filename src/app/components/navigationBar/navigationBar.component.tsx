@@ -1,3 +1,4 @@
+import React from 'react';
 import { ReactComponent as BackIcon } from '../../images/backIcon.svg';
 import { ReactComponent as SearchIcon } from '../../images/searchIcon.svg';
 import './navigationBar.component.scss';
@@ -9,7 +10,7 @@ interface NavigationBarProps {
     showPopular: () => void;
 }
 
-export const NavigationBar = function ({
+export function NavigationBar({
     onBack,
     onDone,
     showCatalog,
@@ -17,28 +18,28 @@ export const NavigationBar = function ({
 }: NavigationBarProps): JSX.Element {
     return (
         <div className="navigation-bar-items">
-            <div className="navigation-btns">
+            <header className="navigation-header">
                 <button className="btn-back" onClick={onBack}>
                     <BackIcon className="back-icon" /> Back
                 </button>
                 <button className="btn-done" onClick={onDone}>
                     Done
                 </button>
-            </div>
+            </header>
             <form className="search-field">
                 <label>
                     <SearchIcon className="search-icon" />
                 </label>
                 <input type="text" placeholder="Add product" />
             </form>
-            <div className="filter-btns">
+            <section className="filter-btns">
                 <button className="btn-popular btn-wide" onClick={showPopular}>
                     Popular
                 </button>
                 <button className="btn-catalog btn-wide" onClick={showCatalog}>
                     Catalog
                 </button>
-            </div>
+            </section>
         </div>
     );
 };

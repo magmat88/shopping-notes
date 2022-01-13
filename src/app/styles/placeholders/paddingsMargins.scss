@@ -1,0 +1,24 @@
+@import "../mixins/mixins.scss";
+@import "../variables/variables.scss";
+
+%marginPaddingStandard {
+    @include setMarginAndPadding(10px, 10px);
+}
+%noPaddingNoMargin {
+    @include setMarginAndPadding(0, 0);
+}
+%paddingSmallMarginSmall {
+    @include setMarginAndPadding(5px, 5px);
+}
+%paddingSmallMarginStandard {
+    @include setMarginAndPadding(10px, 5px);
+}
+%paddingSmallNoMargin {
+    @include setMarginAndPadding(0, 5px);
+}
+%paddingStandardMarginStandard {
+    @include setMarginAndPadding(10px, 10px);
+}
+%paddingStandardNoMargin {
+    @include setMarginAndPadding(0, 10px);
+}

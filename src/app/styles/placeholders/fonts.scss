@@ -1,0 +1,12 @@
+@import "../mixins/mixins.scss";
+@import "../variables/variables.scss";
+
+%fontLargeHeader {
+    font-size: 2.1rem;
+}
+%fontMedium {
+    font-size: 1.1rem;
+}
+%fontStandard {
+    font-size: 1rem;
+}
