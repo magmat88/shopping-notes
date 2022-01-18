@@ -1,4 +1,4 @@
-import { Colors, ColorsList, Icons, IconsList, Product, ShoppingList } from '../modules/content/content.state';
+import { Colors, Icons, Product, ShoppingList } from '../modules/content/content.state';
 
 export const colorsList: Array<Colors> = [
     Colors.Aquamarine,
@@ -15,20 +15,20 @@ export const colorsList: Array<Colors> = [
     Colors.Yellow,
 ];
 
-export const iconsList: IconsList = {
-    basket: Icons.Basket,
-    bowTie: Icons.BowTie,
-    car: Icons.Car,
-    document: Icons.Document,
-    education: Icons.Education,
-    gift: Icons.Gift,
-    glassess: Icons.Glassess,
-    heart: Icons.Heart,
-    medkit: Icons.Medkit,
-    rose: Icons.Rose,
-    sale: Icons.Sale,
-    tools: Icons.Tools,
-};
+export const iconsList: Array<Icons> = [
+    Icons.Basket,
+    Icons.BowTie,
+    Icons.Car,
+    Icons.Document,
+    Icons.Education,
+    Icons.Gift,
+    Icons.Glassess,
+    Icons.Heart,
+    Icons.Medkit,
+    Icons.Rose,
+    Icons.Sale,
+    Icons.Tools,
+];
 
 export const productsList: Array<Product> = [
     {

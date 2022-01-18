@@ -1,5 +1,6 @@
+import { setUncaughtExceptionCaptureCallback } from 'process';
 import React, { useState } from 'react';
-import { Colors } from '../../modules/content/content.state';
+import { Colors, Icons } from '../../modules/content/content.state';
 import { ColorPicker } from '../colorPicker/colorPicker.component';
 import { IconPicker } from '../iconPicker/iconPicker.component';
 
@@ -11,6 +12,7 @@ interface AddShoppingListProps {
 
 export function AddShoppingList({}: AddShoppingListProps): JSX.Element {
     const [color, setColor] = useState<Colors>(Colors.Aquamarine);
+    const [icon, setIcon] = useState<Icons>(Icons.Basket);
 
     function renderInputField(): JSX.Element {
         return (
@@ -24,7 +26,7 @@ export function AddShoppingList({}: AddShoppingListProps): JSX.Element {
         <div className="add-shopping-list">
             {renderInputField()}
             <ColorPicker onSetColor={(color) => setColor(color)} selectedColor={color} />
-            <IconPicker />
+            <IconPicker onSetIcon={(icon) => setIcon(icon)} selectedIcon={icon} />
         </div>
     );
 }

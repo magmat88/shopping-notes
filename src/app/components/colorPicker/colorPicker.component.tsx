@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { colorsList } from '../../config/staticContent';
 import { Colors } from '../../modules/content/content.state';
 import './colorPicker.component.scss';
@@ -8,10 +8,11 @@ interface ColorPickerProps {
     selectedColor: Colors;
 }
 
-export function ColorPicker({ onSetColor, selectedColor }: ColorPickerProps): JSX.Element {
+export function ColorPicker({
+    onSetColor,
+    selectedColor
+}: ColorPickerProps): JSX.Element {
     function renderColorsContainer(): JSX.Element {
-        // const [backgroundColor, setBackgroundColor] = useState({colorsList.aquamarine});
-
         return (
             <section className="colors-container">
                 <header className="container-title">
@@ -23,7 +24,9 @@ export function ColorPicker({ onSetColor, selectedColor }: ColorPickerProps): JS
                             <figure
                                 key={color}
                                 onClick={() => onSetColor(color)}
-                                className={`color-container ${color === selectedColor && 'selected'}`}
+                                className={`color-container ${
+                                    color === selectedColor && 'selected'
+                                }`}
                                 style={{ backgroundColor: color }}
                             ></figure>
                         );
