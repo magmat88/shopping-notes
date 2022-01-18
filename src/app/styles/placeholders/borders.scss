@@ -1,0 +1,6 @@
+@import "../mixins/mixins.scss";
+@import "../variables/variables.scss";
+
+%borderBottomLight {
+    border-bottom: 0.5px solid $color_light;
+}

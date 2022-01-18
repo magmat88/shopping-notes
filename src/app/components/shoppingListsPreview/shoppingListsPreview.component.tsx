@@ -12,6 +12,7 @@ export function ShoppingListsPreview({
 }: ShoppingListsPreviewProps): JSX.Element {
     return (
         <div className="shopping-lists-preview">
+            {/* TODO: create separate functions to render tile content */}
             <section className="preview-empty">No lists</section>
             <section className="preview-with-content">
                 <ShoppingListTile shoppingList={shoppingLists[0]} />

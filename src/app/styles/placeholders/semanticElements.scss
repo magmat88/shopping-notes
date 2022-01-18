@@ -11,3 +11,12 @@
         @extend %paletteWhiteContrast;
     }
 }
+
+%inputText {
+    @extend %fontStandard;
+    @extend %paddingSmallNoMargin;
+    @extend %rowLeft;
+    background: transparent;
+    border: none;
+    width: 82vw;
+}

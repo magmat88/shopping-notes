@@ -1,7 +1,8 @@
 import React from 'react';
-import { products, shoppingLists } from './config/staticContent';
+import { colorsList, iconsList, productsList, shoppingLists } from './config/staticContent';
+import { AddShoppingList } from './components/addShoppingList/addShoppingList.component';
 import { NavigationBar } from './components/navigationBar/navigationBar.component';
-import { ShoppingListItem } from './components/shoppingListItem/shoppingListItem';
+import { ShoppingListItem } from './components/shoppingListItem/shoppingListItem.component';
 import { ShoppingListsPreview } from './components/shoppingListsPreview/shoppingListsPreview.component';
 import './app.scss';
 
@@ -34,26 +35,26 @@ export function App(): JSX.Element {
                 onRemoveProduct={() => {
                     console.log('on remove product');
                 }}
-                product={products[0]}
+                product={productsList[0]}
             />
         );
     }
 
     function renderShoppingListsPreview(): JSX.Element {
-        console.log(shoppingLists);
-
-        return (
-            <ShoppingListsPreview
-                shoppingLists={shoppingLists}
-            />
-        );
+        return <ShoppingListsPreview shoppingLists={shoppingLists} />;
     }
 
+    function renderAddShoppingList(): JSX.Element {
+        console.log(colorsList)
+        return <AddShoppingList />;
+    }
+    // TODO: Create main content component with logic for switching different views
     return (
         <div className="app">
-            { renderNavigationBar() }
-            { renderShoppingListItem() }
-            { renderShoppingListsPreview() }
+            {renderNavigationBar()}
+            {renderShoppingListItem()}
+            {renderShoppingListsPreview()}
+            {renderAddShoppingList()}
         </div>
     );
 }

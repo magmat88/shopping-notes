@@ -12,8 +12,8 @@ export function ShoppingListTile({ shoppingList }: ShoppingListTileProps) {
     const [backgroundColor, setBackgroundColor] = useState(iconColor);
     const [iconName, setIconName] = useState(shoppingList.listIcon.icon);
 
-    return (
-        <section className="shopping-list-tile">
+    function renderIcon(): JSX.Element {
+        return (
             <figure
                 className="custom-category-icon-container"
                 style={{ backgroundColor }}
@@ -23,6 +23,12 @@ export function ShoppingListTile({ shoppingList }: ShoppingListTileProps) {
                     <TrolleyIcon className="category-icon" />
                 ) : null}
             </figure>
+        );
+    }
+
+    return (
+        <section className="shopping-list-tile">
+            {renderIcon()}
             <p>{shoppingList.title}</p>
         </section>
     );

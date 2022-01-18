@@ -1,0 +1,19 @@
+@import "../../styles/mixins/mixins.scss";
+@import "../../styles/placeholders/placeholders.scss";
+@import "../../styles/variables/variables.scss";
+
+.icons-container {
+    .container-title {
+        @extend %fontStandard;
+        @extend %headerWithTransparentButtons;
+        font-weight: bold;
+    }
+
+    .icon-container {
+        @extend %columnCentered;
+        @extend %paletteLightDark;
+        border-radius: 50%;
+        height: 42px;
+        width: 42px;
+    }
+}

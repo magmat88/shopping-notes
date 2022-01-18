@@ -3,10 +3,10 @@
 @import "../../styles/variables/variables.scss";
 
 .shopping-list-item {
-    @extend %rowSpaceBetween;
-    @extend %paletteWhite;
+    @extend %borderBottomLight;
     @extend %paddingSmallNoMargin;
-    border-bottom: 0.5px solid $color_light;
+    @extend %paletteWhite;
+    @extend %rowSpaceBetween;
     font-family: $font-main, $font-alternative;
     height: 56px;
     width: 90vw;
@@ -18,17 +18,17 @@
     .add-product {
         @extend %rowLeft;
     }
-    
+
     .btn-add-product {
         @extend %columnCentered;
         width: 2rem;
     }
-    
+
     .btn-remove-product {
         @extend %fontStandard;
         color: $color_alert;
     }
-    
+
     .btn-transparent {
         @extend %btnTransparent;
     }
@@ -36,7 +36,7 @@
     .text-product-category {
         @extend %paletteWhiteLight;
     }
-    
+
     .text-product-name {
         @extend %marginPaddingStandard;
     }

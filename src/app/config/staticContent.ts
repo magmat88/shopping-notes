@@ -1,6 +1,46 @@
-export const shoppingLists = [
+import { Colors, ColorsList, Icons, IconsList, Product, ShoppingList } from '../modules/content/content.state';
+
+export const colorsList: Array<Colors> = [
+    Colors.Aquamarine,
+    Colors.Azure,
+    Colors.Beige,
+    Colors.Brown,
+    Colors.Fuchsia,
+    Colors.Green,
+    Colors.Grey,
+    Colors.NavyBlue,
+    Colors.Orange,
+    Colors.Red,
+    Colors.Violet,
+    Colors.Yellow,
+];
+
+export const iconsList: IconsList = {
+    basket: Icons.Basket,
+    bowTie: Icons.BowTie,
+    car: Icons.Car,
+    document: Icons.Document,
+    education: Icons.Education,
+    gift: Icons.Gift,
+    glassess: Icons.Glassess,
+    heart: Icons.Heart,
+    medkit: Icons.Medkit,
+    rose: Icons.Rose,
+    sale: Icons.Sale,
+    tools: Icons.Tools,
+};
+
+export const productsList: Array<Product> = [
     {
-        listIcon: { color: '#008000', icon: 'TrolleyIcon' },
+        category: 'Fruits',
+        name: 'Arbuz',
+        quantity: 4
+    },
+];
+
+export const shoppingLists: Array<ShoppingList> = [
+    {
+        listIcon: { color: '#008000', icon: 'GiftIcon' },
         productsList: [
             {
                 category: 'Fruits',
@@ -31,12 +71,4 @@ export const shoppingLists = [
         ],
         title: 'To buy later'
     }
-];
-
-export const products = [
-    {
-        category: 'Fruits',
-        name: 'Arbuz',
-        quantity: 4
-    },
 ];
