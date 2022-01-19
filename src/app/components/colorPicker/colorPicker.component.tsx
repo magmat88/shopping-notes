@@ -14,21 +14,25 @@ export function ColorPicker({
 }: ColorPickerProps): JSX.Element {
     function renderColorsContainer(): JSX.Element {
         return (
-            <section className="colors-container">
-                <header className="container-title">
+            <section className="color-picker">
+                <header className="title">
                     <h3>Color</h3>
                 </header>
-                <div>
+                <div className="color-icons-container">
                     {colorsList.map((color) => {
                         return (
-                            <figure
+                            <div
                                 key={color}
-                                onClick={() => onSetColor(color)}
-                                className={`color-container ${
+                                className={`color-icon-container ${
                                     color === selectedColor && 'selected'
                                 }`}
-                                style={{ backgroundColor: color }}
-                            ></figure>
+                            >
+                                <figure
+                                    onClick={() => onSetColor(color)}
+                                    className="color-icon"
+                                    style={{ backgroundColor: color }}
+                                ></figure>
+                            </div>
                         );
                     })}
                 </div>

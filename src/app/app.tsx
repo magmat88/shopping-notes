@@ -45,7 +45,6 @@ export function App(): JSX.Element {
     }
 
     function renderAddShoppingList(): JSX.Element {
-        console.log(colorsList)
         return <AddShoppingList />;
     }
     // TODO: Create main content component with logic for switching different views

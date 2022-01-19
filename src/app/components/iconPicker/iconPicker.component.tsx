@@ -26,21 +26,29 @@ export function IconPicker({
 }: IconPickerProps): JSX.Element {
     function renderIconsContainer(): JSX.Element {
         return (
-            <section className="icons-container">
-                <header className="container-title">
+            <section className="icon-picker">
+                <header className="title">
                     <h3>Icon</h3>
                 </header>
-                <div>
+                <div className="icons-container">
                     {iconsList.map((icon) => {
-                        console.log(icon);
                         return (
-                            <figure
+                            <div
                                 key={icon}
-                                onClick={() => onSetIcon(icon)}
                                 className={`icon-container ${
                                     icon === selectedIcon && 'selected'
                                 }`}
-                            ><img src={require(`../../images/${icon}.svg`)} alt={icon}/></figure>
+                            >
+                                <figure
+                                    onClick={() => onSetIcon(icon)}
+                                    className="icon"
+                                >
+                                    <img
+                                        src={require(`../../images/${icon}.svg`)}
+                                        alt={icon}
+                                    />
+                                </figure>
+                            </div>
                         );
                     })}
                 </div>

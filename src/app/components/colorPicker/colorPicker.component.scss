@@ -2,23 +2,39 @@
 @import "../../styles/placeholders/placeholders.scss";
 @import "../../styles/variables/variables.scss";
 
-.colors-container {
-    .container-title {
+.color-picker {
+    @extend %columnCentered;
+
+    .color-icon {
+        @extend %columnCentered;
+        @extend %paletteLightDark;
+        border-radius: 50%;
+        cursor: pointer;
+        height: 42px;
+        margin: 3px;
+        width: 42px;
+    }
+
+    .color-icon-container {
+        margin: 2px;
+        border-radius: 50%;
+        border: 3px solid $color_white;
+
+
+    }
+
+    .color-icons-container {
+        @extend %rowCentered;
+        flex-wrap: wrap;
+    }
+    
+    .title {
         @extend %fontStandard;
         @extend %headerWithTransparentButtons;
         font-weight: bold;
     }
 
-    .color-container {
-        @extend %columnCentered;
-        @extend %paletteLightDark;
-        border-radius: 50%;
-        height: 42px;
-        width: 42px;
-        margin: 5px;
-    }
-
     .selected {
-        border: 5px solid black;
+        border: 3px solid $color_medium;
     }
 }

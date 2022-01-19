@@ -2,18 +2,37 @@
 @import "../../styles/placeholders/placeholders.scss";
 @import "../../styles/variables/variables.scss";
 
-.icons-container {
-    .container-title {
+.icon-picker {
+    @extend %columnCentered;
+
+    .title {
         @extend %fontStandard;
         @extend %headerWithTransparentButtons;
         font-weight: bold;
     }
 
-    .icon-container {
+    .icon {
         @extend %columnCentered;
         @extend %paletteLightDark;
         border-radius: 50%;
+        cursor: pointer;
         height: 42px;
+        margin: 3px;
         width: 42px;
+    }
+
+    .icon-container {
+        margin: 2px;
+        border-radius: 50%;
+        border: 3px solid $color_white;
+    }
+    
+    .icons-container {
+        @extend %rowCentered;
+        flex-wrap: wrap;
+    }
+
+    .selected {
+        border: 3px solid $color_medium;
     }
 }
