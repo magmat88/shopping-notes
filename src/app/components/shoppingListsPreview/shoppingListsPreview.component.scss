@@ -5,18 +5,20 @@
 .shopping-lists-preview {
     @extend %columnCentered;
     @extend %paddingSmallMarginStandard;
+    width: 90vw;
 
     .preview-empty {
         @extend %columnCentered;
         @extend %paletteWhiteLight;
         height: 70vh;
-        width: 90vh;
+        width: 90%;
+
     }
     
     .preview-with-content {
         @extend %columnCentered;
         @extend %paddingSmallMarginSmall;
         height: 70vh;
-        width: 90vh;
+        width: 90%;
     }   
 }

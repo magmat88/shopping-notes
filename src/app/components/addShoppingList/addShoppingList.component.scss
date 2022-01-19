@@ -5,6 +5,7 @@
 .add-shopping-list {
     @extend %columnCentered;
     @extend %paddingSmallMarginStandard;
+    width: 90vw;
 
     .input-field {
         @extend %borderBottomLight;
