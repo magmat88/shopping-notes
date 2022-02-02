@@ -2,12 +2,12 @@
 @import "../../styles/placeholders/placeholders.scss";
 @import "../../styles/variables/variables.scss";
 
-.add-shopping-list {
+.add-list {
     @extend %columnCentered;
     @extend %paddingSmallMarginStandard;
     width: 90vw;
 
-    .input-field {
+    .add-list__input {
         @extend %borderBottomLight;
         @extend %paddingSmallNoMargin;
         @extend %paletteWhiteLight;

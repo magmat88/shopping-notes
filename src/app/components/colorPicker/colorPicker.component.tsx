@@ -12,33 +12,37 @@ export function ColorPicker({
     onSetColor,
     selectedColor
 }: ColorPickerProps): JSX.Element {
-    function renderColorsContainer(): JSX.Element {
+    
+    function renderIcons(): JSX.Element {
         return (
-            <section className="color-picker">
-                <header className="title">
-                    <h3>Color</h3>
-                </header>
-                <div className="color-icons-container">
-                    {colorsList.map((color) => {
-                        return (
+            <article className="color-picker__icons">
+                {colorsList.map((color) => {
+                    return (
+                        <figure
+                            key={color}
+                            className={`icon__color ${
+                                color === selectedColor &&
+                                'icon__color--selected'
+                            }`}
+                        >
                             <div
-                                key={color}
-                                className={`color-icon-container ${
-                                    color === selectedColor && 'selected'
-                                }`}
-                            >
-                                <figure
-                                    onClick={() => onSetColor(color)}
-                                    className="color-icon"
-                                    style={{ backgroundColor: color }}
-                                ></figure>
-                            </div>
-                        );
-                    })}
-                </div>
-            </section>
+                                onClick={() => onSetColor(color)}
+                                className="icon__color--with-background"
+                                style={{ backgroundColor: color }}
+                            ></div>
+                        </figure>
+                    );
+                })}
+            </article>
         );
     }
 
-    return <div>{renderColorsContainer()}</div>;
+    return (
+        <section className="color-picker">
+            <header className="color-picker__title">
+                <h3>Color</h3>
+            </header>
+            {renderIcons()}
+        </section>
+    );
 }

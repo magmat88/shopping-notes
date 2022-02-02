@@ -1,20 +1,51 @@
 import React from 'react';
-import { colorsList, iconsList, productsList, shoppingLists } from './config/staticContent';
-import { AddShoppingList } from './components/addShoppingList/addShoppingList.component';
-import { NavigationBar } from './components/navigationBar/navigationBar.component';
-import { ShoppingListItem } from './components/shoppingListItem/shoppingListItem.component';
-import { ShoppingListsPreview } from './components/shoppingListsPreview/shoppingListsPreview.component';
+import {
+    colorsList,
+    picturesList,
+    productsList,
+    shoppingLists
+} from './config/staticContent';
+import { AddList } from './components/addList/addList.component';
+import { Navbar } from './components/navbar/navbar.component';
+import { ProductLabel } from './components/productLabel/productLabel.component';
+import { Preview } from './components/preview/preview.component';
 import './app.scss';
 
 export function App(): JSX.Element {
-    function renderNavigationBar(): JSX.Element {
+    function renderNavbar(): JSX.Element {
         return (
-            <NavigationBar
+            <Navbar
+                onAddList={() => {
+                    console.log(`on add list:
+                    1. hide default lists preview navbar view
+                    2. render add shopping list navbar view
+                    3. hide default lists preview main content view
+                    4. render add shopping list main content view`);
+                }}
                 onBack={() => {
-                    console.log('on back');
+                    console.log(`on back:
+                    1. `);
+                }}
+                onCancel={() => {
+                    console.log(`on cancel:
+                    1. hide add list navbar view
+                    2. render lists preview navbar view
+                    3. hide addlist main content view
+                    4. render lists preview main content view`);
                 }}
                 onDone={() => {
-                    console.log('on done');
+                    console.log(`on done:
+                    Adding new list:
+                    1. check if title lenght > 0
+                    1a. if empty string do nothing
+                    1b. if string not empty: check if check if title does not exist in shopping lists:
+                    1b.a if string exists in shopping lists: (...): change title color to red?
+                    1b.b if string doesn't exist in lists:
+                    2. add new list item to product list (title, color, icon, products: default empty)
+                    3. hide add list navbar view
+                    2. render lists preview navbar view
+                    3. hide addlist main content view
+                    4. render lists preview main content view`);
                 }}
                 showCatalog={() => {
                     console.log('show catalog of products');
@@ -26,9 +57,9 @@ export function App(): JSX.Element {
         );
     }
 
-    function renderShoppingListItem(): JSX.Element {
+    function renderProductLabel(): JSX.Element {
         return (
-            <ShoppingListItem
+            <ProductLabel
                 onAddProduct={() => {
                     console.log('on add product');
                 }}
@@ -40,20 +71,21 @@ export function App(): JSX.Element {
         );
     }
 
-    function renderShoppingListsPreview(): JSX.Element {
-        return <ShoppingListsPreview shoppingLists={shoppingLists} />;
+    function renderPreview(): JSX.Element {
+        return <Preview shoppingLists={shoppingLists} />;
     }
 
-    function renderAddShoppingList(): JSX.Element {
-        return <AddShoppingList />;
+    function renderAddList(): JSX.Element {
+        return <AddList />;
     }
-    // TODO: Create main content component with logic for switching different views
+
     return (
         <div className="app">
-            {renderNavigationBar()}
-            {renderShoppingListItem()}
-            {renderShoppingListsPreview()}
-            {renderAddShoppingList()}
+            {renderNavbar()}
+            {/* TODO: Create main content component with logic for switching different views */}
+            {/* {renderShoppingListItem()} */}
+            {renderPreview()}
+            {/* {renderAddList()} */}
         </div>
     );
 }

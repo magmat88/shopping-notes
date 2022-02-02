@@ -13,7 +13,7 @@ export enum Colors {
     Yellow = '#FFE200'
 }
 
-export enum Icons {
+export enum Pictures {
     Basket = 'basketIcon',
     BowTie = 'bowTieIcon',
     Car = 'carIcon',
@@ -36,13 +36,13 @@ export interface Product {
 };
 
 export interface ShoppingList {
-    listIcon: ListIcon;
+    listPicture: ListPicture;
     productsList: Array<Product>;
     title: string;
 };
 
-export interface ListIcon {
+export interface ListPicture {
     //TODO: color and icon as enums
     color: string;
-    icon: string;
+    picture: string;
 }

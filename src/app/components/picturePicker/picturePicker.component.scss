@@ -2,16 +2,20 @@
 @import "../../styles/placeholders/placeholders.scss";
 @import "../../styles/variables/variables.scss";
 
-.icon-picker {
+.picture-picker {
     @extend %columnCentered;
 
-    .title {
-        @extend %fontStandard;
-        @extend %headerWithTransparentButtons;
-        font-weight: bold;
+    .icon__picture {
+        margin: 2px;
+        border-radius: 50%;
+        border: 3px solid $color_white;
     }
 
-    .icon {
+    .icon__picture--selected {
+        border: 3px solid $color_medium;
+    }
+
+    .picture {
         @extend %columnCentered;
         @extend %paletteLightDark;
         border-radius: 50%;
@@ -20,19 +24,15 @@
         margin: 3px;
         width: 42px;
     }
-
-    .icon-container {
-        margin: 2px;
-        border-radius: 50%;
-        border: 3px solid $color_white;
-    }
-    
-    .icons-container {
+ 
+    .picture-picker__icons {
         @extend %rowCentered;
         flex-wrap: wrap;
     }
 
-    .selected {
-        border: 3px solid $color_medium;
+    .picture-picker__title {
+        @extend %fontStandard;
+        @extend %headerWithTransparentButtons;
+        font-weight: bold;
     }
 }

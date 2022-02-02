@@ -1,3 +1,7 @@
+## Design
+Design inspired by Figma's Grocery Shopping List App: 
+https://www.figma.com/file/VrnGlsZqr0zzObgKT350EO/iOS-UI-Kit-(Grocery-Shopping-List-App)-(Community)?node-id=1%3A7529
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts

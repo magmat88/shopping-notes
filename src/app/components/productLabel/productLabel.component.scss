@@ -2,7 +2,7 @@
 @import "../../styles/placeholders/placeholders.scss";
 @import "../../styles/variables/variables.scss";
 
-.shopping-list-item {
+.product-label {
     @extend %borderBottomLight;
     @extend %paddingSmallNoMargin;
     @extend %paletteWhite;

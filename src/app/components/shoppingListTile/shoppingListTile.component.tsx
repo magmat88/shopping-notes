@@ -15,7 +15,7 @@ export function ShoppingListTile({ shoppingList }: ShoppingListTileProps) {
     function renderIcon(): JSX.Element {
         return (
             <figure
-                className="custom-category-icon-container"
+                className="shopping-list__icon"
                 style={{ backgroundColor }}
             >
                 {/* TODO: create enum for icons */}

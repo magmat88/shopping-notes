@@ -1,4 +1,4 @@
-import { Colors, Icons, Product, ShoppingList } from '../modules/content/content.state';
+import { Colors, Pictures, Product, ShoppingList } from '../modules/content/content.state';
 
 export const colorsList: Array<Colors> = [
     Colors.Aquamarine,
@@ -15,19 +15,19 @@ export const colorsList: Array<Colors> = [
     Colors.Yellow,
 ];
 
-export const iconsList: Array<Icons> = [
-    Icons.Basket,
-    Icons.BowTie,
-    Icons.Car,
-    Icons.Document,
-    Icons.Education,
-    Icons.Gift,
-    Icons.Glassess,
-    Icons.Heart,
-    Icons.Medkit,
-    Icons.Rose,
-    Icons.Sale,
-    Icons.Tools,
+export const picturesList: Array<Pictures> = [
+    Pictures.Basket,
+    Pictures.BowTie,
+    Pictures.Car,
+    Pictures.Document,
+    Pictures.Education,
+    Pictures.Gift,
+    Pictures.Glassess,
+    Pictures.Heart,
+    Pictures.Medkit,
+    Pictures.Rose,
+    Pictures.Sale,
+    Pictures.Tools,
 ];
 
 export const productsList: Array<Product> = [
@@ -40,7 +40,7 @@ export const productsList: Array<Product> = [
 
 export const shoppingLists: Array<ShoppingList> = [
     {
-        listIcon: { color: '#008000', icon: 'GiftIcon' },
+        listPicture: { color: '#008000', picture: 'GiftIcon' },
         productsList: [
             {
                 category: 'Fruits',
@@ -56,7 +56,7 @@ export const shoppingLists: Array<ShoppingList> = [
         title: 'All I need'
     },
     {
-        listIcon: { color: '#000FFF', icon: 'TrolleyIcon' },
+        listPicture: { color: '#000FFF', picture: 'TrolleyIcon' },
         productsList: [
             {
                 category: 'Vegetables',

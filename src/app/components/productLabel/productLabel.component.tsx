@@ -1,21 +1,21 @@
 import React from 'react';
 import { Product } from '../../modules/content/content.state';
 import { ReactComponent as PlusIcon } from '../../images/plusIcon.svg';
-import './shoppingListItem.component.scss';
+import './productLabel.component.scss';
 
-interface ShoppingListItemProps {
+interface ProductLabelProps {
     onAddProduct: () => void;
     onRemoveProduct: () => void;
     product: Product;
 }
 
-export function ShoppingListItem({
+export function ProductLabel({
     onAddProduct,
     onRemoveProduct,
     product
-}: ShoppingListItemProps): JSX.Element {
+}: ProductLabelProps): JSX.Element {
     return (
-        <section className="shopping-list-item">
+        <section className="product-label">
             <div className="add-product">
                 <button className="btn-transparent btn-add-product" onClick={onAddProduct}>
                     <PlusIcon />

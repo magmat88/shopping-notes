@@ -5,7 +5,28 @@
 .color-picker {
     @extend %columnCentered;
 
-    .color-icon {
+    .color-picker__icons {
+        @extend %rowCentered;
+        flex-wrap: wrap;
+    }
+    
+    .color-picker__title {
+        @extend %fontStandard;
+        @extend %headerWithTransparentButtons;
+        font-weight: bold;
+    }
+
+    .icon__color {
+        margin: 2px;
+        border-radius: 50%;
+        border: 3px solid $color_white;
+    }
+
+    .icon__color--selected {
+        border: 3px solid $color_medium;
+    }
+
+    .icon__color--with-background {
         @extend %columnCentered;
         @extend %paletteLightDark;
         border-radius: 50%;
@@ -13,28 +34,5 @@
         height: 42px;
         margin: 3px;
         width: 42px;
-    }
-
-    .color-icon-container {
-        margin: 2px;
-        border-radius: 50%;
-        border: 3px solid $color_white;
-
-
-    }
-
-    .color-icons-container {
-        @extend %rowCentered;
-        flex-wrap: wrap;
-    }
-    
-    .title {
-        @extend %fontStandard;
-        @extend %headerWithTransparentButtons;
-        font-weight: bold;
-    }
-
-    .selected {
-        border: 3px solid $color_medium;
     }
 }
