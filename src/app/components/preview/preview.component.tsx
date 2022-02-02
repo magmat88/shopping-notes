@@ -1,6 +1,6 @@
 import React from 'react';
 import { ShoppingList } from '../../modules/content/content.state';
-import { ShoppingListTile } from '../shoppingListTile/shoppingListTile.component';
+import { AddedList } from '../addedList/addedList.component';
 import './preview.component.scss';
 
 interface PreviewProps {
@@ -16,8 +16,8 @@ export function Preview({
             <article className="preview--empty">No lists</article>
             <article className="preview--with-content">
                 {/* to remove: */}
-                {/* <ShoppingListTile shoppingList={shoppingLists[0]} />
-                <ShoppingListTile shoppingList={shoppingLists[1]} /> */}
+                {/* <AddedList shoppingList={shoppingLists[0]} />
+                <AddedList shoppingList={shoppingLists[1]} /> */}
             </article>
         </section>
     );

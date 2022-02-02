@@ -7,7 +7,7 @@ import {
 } from './config/staticContent';
 import { AddList } from './components/addList/addList.component';
 import { Navbar } from './components/navbar/navbar.component';
-import { ProductLabel } from './components/productLabel/productLabel.component';
+import { ListItem } from './components/listItem/listItem.component';
 import { Preview } from './components/preview/preview.component';
 import './app.scss';
 
@@ -59,7 +59,7 @@ export function App(): JSX.Element {
 
     function renderProductLabel(): JSX.Element {
         return (
-            <ProductLabel
+            <ListItem
                 onAddProduct={() => {
                     console.log('on add product');
                 }}

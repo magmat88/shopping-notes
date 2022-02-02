@@ -36,12 +36,12 @@ export interface Product {
 };
 
 export interface ShoppingList {
-    listPicture: ListPicture;
+    icon: Icon;
     productsList: Array<Product>;
     title: string;
 };
 
-export interface ListPicture {
+export interface Icon {
     //TODO: color and icon as enums
     color: string;
     picture: string;

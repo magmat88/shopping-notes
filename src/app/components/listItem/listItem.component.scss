@@ -2,7 +2,7 @@
 @import "../../styles/placeholders/placeholders.scss";
 @import "../../styles/variables/variables.scss";
 
-.product-label {
+.list-item {
     @extend %borderBottomLight;
     @extend %paddingSmallNoMargin;
     @extend %paletteWhite;
@@ -15,29 +15,29 @@
         border-top: 0.5px solid $color_light;
     }
 
-    .add-product {
-        @extend %rowLeft;
-    }
-
-    .btn-add-product {
+    .btn--plus {
         @extend %columnCentered;
         width: 2rem;
     }
 
-    .btn-remove-product {
+    .btn--remove {
         @extend %fontStandard;
         color: $color_alert;
     }
 
-    .btn-transparent {
+    .btn--transparent {
         @extend %btnTransparent;
     }
+    
+    .list-item__product--left {
+        @extend %rowLeft;
+    }
 
-    .text-product-category {
+    .product__category {
         @extend %paletteWhiteLight;
     }
 
-    .text-product-name {
+    .product__name {
         @extend %marginPaddingStandard;
     }
 }

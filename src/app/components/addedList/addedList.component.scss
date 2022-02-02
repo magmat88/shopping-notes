@@ -2,7 +2,7 @@
 @import "../../styles/placeholders/placeholders.scss";
 @import "../../styles/variables/variables.scss";
 
-.shopping-list-tile {
+.added-list {
     @extend %paddingSmallMarginSmall;
     @extend %paletteLightMedium;
     @extend %rowLeft;
@@ -11,18 +11,18 @@
     height: 58px;
     width: 90vw;
 
-    .category-icon {
+    .picture {
         height: 55%;
     }
     
-    .shopping-list__icon {
+    .added-list__icon--colored {
         @extend %columnCentered;
         border-radius: 50%;
         height: 40px;
         width: 40px;
     }
 
-    p {
+    .added-list__title {
         @extend %paletteLightDark;
         cursor: default;
         font-weight: bold;

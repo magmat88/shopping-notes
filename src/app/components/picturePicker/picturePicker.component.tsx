@@ -1,18 +1,6 @@
 import React from 'react';
 import { picturesList } from '../../config/staticContent';
 import { Pictures } from '../../modules/content/content.state';
-// import basketIcon from '../../images/basketIcon.svg';
-// import bowTieIcon from '../../images/bowTieIcon.svg';
-// import carIcon from '../../images/carIcon.svg';
-// import documentIcon from '../../images/documentIcon.svg';
-// import educationIcon from '../../images/educationIcon.svg';
-// import giftIcon from '../../images/giftIcon.svg';
-// import glassessIcon from '../../images/glassessIcon.svg';
-// import heartIcon from '../../images/heartIcon.svg';
-// import medkitIcon from '../../images/medkitIcon.svg';
-// import roseIcon from '../../images/roseIcon.svg';
-// import saleIcon from '../../images/saleIcon.svg';
-// import toolsIcon from '../../images/toolsIcon.svg';
 import './picturePicker.component.scss';
 
 interface PicturePickerProps {
