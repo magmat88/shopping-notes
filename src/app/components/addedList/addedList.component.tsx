@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react';
+import ReactRedux from 'react-redux';
 import { ShoppingList } from '../../modules/content/content.state';
 import { ReactComponent as TrolleyIcon } from '../../images/trolleyIcon.svg';
 import { ReactComponent as BasketIcon } from '../../images/basketIcon.svg';
@@ -66,7 +67,6 @@ export function AddedList({ shoppingList }: AddedListProps) {
             return <ToolsIcon className="picture" />
         }
         return <Fragment></Fragment>;
-       
     }
 
     return (
