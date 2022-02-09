@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { ShoppingList } from '../../modules/content/content.state';
 import { AddedList } from '../addedList/addedList.component';
 import './preview.component.scss';
@@ -10,6 +10,8 @@ interface PreviewProps {
 export function Preview({
     shoppingLists
 }: PreviewProps): JSX.Element {
+   
+
     return (
         <section className="preview">
             {/* TODO: create separate functions to render tile content */}

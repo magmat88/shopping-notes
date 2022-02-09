@@ -2,12 +2,12 @@
 @import "../../styles/placeholders/placeholders.scss";
 @import "../../styles/variables/variables.scss";
 
-.add-list {
+.customize-list {
     @extend %columnCentered;
     @extend %paddingSmallMarginStandard;
     width: 90vw;
 
-    .add-list__input {
+    .customize-list__input {
         @extend %borderBottomLight;
         @extend %paddingSmallNoMargin;
         @extend %paletteWhiteLight;

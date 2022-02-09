@@ -1,0 +1,1 @@
+export const EVENT_CODE_ENTER_KEY = "Enter";

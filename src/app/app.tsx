@@ -5,15 +5,13 @@ import {
     productsList,
     shoppingLists
 } from './config/staticContent';
-import { AddList } from './components/addList/addList.component';
+import { MainContent } from './components/mainContent/mainContent.component';
 import { Navbar } from './components/navbar/navbar.component';
-import { ListItem } from './components/listItem/listItem.component';
-import { Preview } from './components/preview/preview.component';
 import './app.scss';
 
 export function App(): JSX.Element {
-    function renderNavbar(): JSX.Element {
-        return (
+    return (
+        <div className="app">
             <Navbar
                 onAddList={() => {
                     console.log(`on add list:
@@ -54,38 +52,7 @@ export function App(): JSX.Element {
                     console.log('show popular products');
                 }}
             />
-        );
-    }
-
-    function renderProductLabel(): JSX.Element {
-        return (
-            <ListItem
-                onAddProduct={() => {
-                    console.log('on add product');
-                }}
-                onRemoveProduct={() => {
-                    console.log('on remove product');
-                }}
-                product={productsList[0]}
-            />
-        );
-    }
-
-    function renderPreview(): JSX.Element {
-        return <Preview shoppingLists={shoppingLists} />;
-    }
-
-    function renderAddList(): JSX.Element {
-        return <AddList />;
-    }
-
-    return (
-        <div className="app">
-            {renderNavbar()}
-            {/* TODO: Create main content component with logic for switching different views */}
-            {/* {renderShoppingListItem()} */}
-            {renderPreview()}
-            {/* {renderAddList()} */}
+            <MainContent />
         </div>
     );
 }
