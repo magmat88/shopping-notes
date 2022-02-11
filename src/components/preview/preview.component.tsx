@@ -5,10 +5,11 @@ import './preview.component.scss';
 
 interface PreviewProps {
     shoppingLists: Array<ShoppingList>;
+    dispatch: any;
 }
 
 export function Preview({
-    shoppingLists
+    shoppingLists, dispatch
 }: PreviewProps): JSX.Element {
    
 
