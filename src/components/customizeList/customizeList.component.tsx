@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { EVENT_CODE_ENTER_KEY } from '../../utils/eventKeyCodes';
-import { Colors, Pictures } from '../../modules/content/content.state';
+import { EVENT_CODE_ENTER_KEY } from '../../app/utils/eventKeyCodes';
+import { Colors, Pictures } from '../../app/modules/content/content.state';
 import { ColorPicker } from '../colorPicker/colorPicker.component';
 import { PicturePicker } from '../picturePicker/picturePicker.component';
 import './customizeList.component.scss';

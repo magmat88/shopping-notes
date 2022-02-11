@@ -3,8 +3,8 @@ import {
     colorsList,
     picturesList,
     productsList,
-    shoppingLists
-} from '../../config/staticContent';
+    // shoppingLists
+} from '../../app/config/staticContent';
 import { ListItem } from '../listItem/listItem.component';
 import { CustomizeList } from '../customizeList/customizeList.component';
 import { Preview } from '../preview/preview.component';
@@ -15,7 +15,7 @@ interface MainContentProps {}
 export function MainContent({}: MainContentProps): JSX.Element {
     return (
         <Fragment>
-            <Preview shoppingLists={shoppingLists} />
+            <Preview shoppingLists={[]} />
 
             {/* <CustomizeList /> */}
 

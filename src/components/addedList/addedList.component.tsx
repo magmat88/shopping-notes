@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import ReactRedux from 'react-redux';
-import { ShoppingList } from '../../modules/content/content.state';
+import { ShoppingList } from '../../app/modules/content/content.state';
 import { ReactComponent as TrolleyIcon } from '../../images/trolleyIcon.svg';
 import { ReactComponent as BasketIcon } from '../../images/basketIcon.svg';
 import { ReactComponent as BowTieIcon } from '../../images/bowTieIcon.svg';

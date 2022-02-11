@@ -1,6 +1,6 @@
 import React from 'react';
-import { colorsList } from '../../config/staticContent';
-import { Colors } from '../../modules/content/content.state';
+import { colorsList } from '../../app/config/staticContent';
+import { Colors } from '../../app/modules/content/content.state';
 import './colorPicker.component.scss';
 
 interface ColorPickerProps {

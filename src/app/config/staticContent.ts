@@ -38,37 +38,37 @@ export const productsList: Array<Product> = [
     },
 ];
 
-export const shoppingLists: Array<ShoppingList> = [
-    {
-        listPicture: { color: '#008000', picture: 'GiftIcon' },
-        productsList: [
-            {
-                category: 'Fruits',
-                name: 'Orange',
-                quantity: 2
-            },
-            {
-                category: 'Dairy',
-                name: 'Milk',
-                quantity: 5
-            }
-        ],
-        title: 'All I need'
-    },
-    {
-        listPicture: { color: '#000FFF', picture: 'TrolleyIcon' },
-        productsList: [
-            {
-                category: 'Vegetables',
-                name: 'Carrot',
-                quantity: 8
-            },
-            {
-                category: 'Cleaning products',
-                name: 'Dish soap',
-                quantity: 1
-            }
-        ],
-        title: 'To buy later'
-    }
-];
+// export const shoppingLists: Array<ShoppingList> = [
+//     {
+//         listPicture: { color: '#008000', picture: 'GiftIcon' },
+//         productsList: [
+//             {
+//                 category: 'Fruits',
+//                 name: 'Orange',
+//                 quantity: 2
+//             },
+//             {
+//                 category: 'Dairy',
+//                 name: 'Milk',
+//                 quantity: 5
+//             }
+//         ],
+//         title: 'All I need'
+//     },
+//     {
+//         listPicture: { color: '#000FFF', picture: 'TrolleyIcon' },
+//         productsList: [
+//             {
+//                 category: 'Vegetables',
+//                 name: 'Carrot',
+//                 quantity: 8
+//             },
+//             {
+//                 category: 'Cleaning products',
+//                 name: 'Dish soap',
+//                 quantity: 1
+//             }
+//         ],
+//         title: 'To buy later'
+//     }
+// ];

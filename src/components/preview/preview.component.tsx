@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { ShoppingList } from '../../modules/content/content.state';
+import { ShoppingList } from '../../app/modules/content/content.state';
 import { AddedList } from '../addedList/addedList.component';
 import './preview.component.scss';
 

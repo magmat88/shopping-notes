@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
 // import { useSelector, useDispatch } from 'react-redux';
-import { useAppSelector, useAppDispatch } from '../../hooks';
-import {
-    addList,
-    removeList,
-    editList
-} from '../../../features/lists/listsSlice';
+import { useAppSelector, useAppDispatch } from '../../app/hooks';
+// import {
+//     addList,
+//     removeList,
+//     editList
+// } from '../../../features/lists/listsSlice';
 
 import { ReactComponent as BackIcon } from '../../images/backIcon.svg';
 import { ReactComponent as SearchIcon } from '../../images/searchIcon.svg';
@@ -29,8 +29,8 @@ export function Navbar({
     showPopular
 }: NavbarProps): JSX.Element {
 
-    const list = useAppSelector((state) => state.lists.addedLists);
-    const dispatch = useAppDispatch();
+    // const list = useAppSelector((state) => state.lists.addedLists);
+    // const dispatch = useAppDispatch();
 
     function showAddProductNavigation(): JSX.Element {
         return (
@@ -77,18 +77,20 @@ export function Navbar({
             // TODO: check if empty header is visible - if yes, consider conditionals outside of header tag
             // TODO: if add product clicked - add set className="filter__btns" instead of "navbar__title" to header
             <header
-                className="filter_btns"
-                //  className="navbar__title"`}"
+                className="navbar__title"
+                //  className="filter_btns"`}"
             >
                 {/* if add list clicked - show add list header */}
-                <h1>Add List</h1>
+                {/* <h1>Add List</h1> */}
 
                 {/* if cancel clicked or it is an initial view - show preview header*/}
                 <h1>Lists</h1>
                 {/* <button onClick={onAddList}>Add list</button> */}
-                <button onClick={() => dispatch(addList())}>Add list</button>
+                {/* <button onClick={() => dispatch(addList())}>Add list</button> */}
+                <button onClick={() => console.log('add list')}>Add list</button>
+
                 {/* if add product clicked - show add product header */}
-                <button
+                {/* <button
                     className="btn--popular btn--wide"
                     onClick={showPopular}
                 >
@@ -99,9 +101,9 @@ export function Navbar({
                     onClick={showCatalog}
                 >
                     Catalog
-                </button>
+                </button> */}
                 {/* TO REMOVE: */}
-                {list}
+                {/* {list} */}
             </header>
         );
     }
@@ -121,7 +123,7 @@ export function Navbar({
     return (
         <nav className="navbar">
             {renderNavigation()}
-            {renderForm()}
+            {/* {renderForm()} */}
             {renderHeader()}
         </nav>
     );

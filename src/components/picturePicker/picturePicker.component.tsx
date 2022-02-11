@@ -1,6 +1,6 @@
 import React from 'react';
-import { picturesList } from '../../config/staticContent';
-import { Pictures } from '../../modules/content/content.state';
+import { picturesList } from '../../app/config/staticContent';
+import { Pictures } from '../../app/modules/content/content.state';
 import './picturePicker.component.scss';
 
 interface PicturePickerProps {

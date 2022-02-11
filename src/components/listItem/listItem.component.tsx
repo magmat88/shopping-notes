@@ -1,5 +1,5 @@
 import React from 'react';
-import { Product } from '../../modules/content/content.state';
+import { Product } from '../../app/modules/content/content.state';
 import { ReactComponent as PlusIcon } from '../../images/plusIcon.svg';
 import './listItem.component.scss';
 
